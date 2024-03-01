@@ -31,6 +31,7 @@ const SearchForm = () => {
 
   useEffect(() => {
     searchAPI();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchString]);
 
   const handleInput = (e) => {
