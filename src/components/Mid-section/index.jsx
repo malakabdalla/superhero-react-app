@@ -14,10 +14,7 @@ function MidSection() {
             <button>Search</button>
           </Link>
         </div>
-        <img
-          className="midSection-img"
-          src="../../../public/Screenshot_1.png"
-        />
+        <img className="midSection-img" src="Screenshot_1.png" />
       </div>
     </>
   );

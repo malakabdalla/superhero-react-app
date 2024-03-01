@@ -16,7 +16,7 @@ function EndSection() {
             <button>Favorite</button>
           </Link>
         </div>
-        <img className="endSectionImg" src="../../../public/superHero3.png" />
+        <img className="endSectionImg" src="superHero3.png" />
       </div>
     </>
   );
