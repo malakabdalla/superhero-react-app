@@ -9,7 +9,7 @@ const PageWrapper = () => {
             <NavLink to="/">
               <img
                 className="img"
-                src="./public/281786_super_hero_superman_icon.png"
+                src="../../../public/281786_super_hero_superman_icon.png"
               />
             </NavLink>
             <p className="logo-name">SuperHero Hunter</p>
