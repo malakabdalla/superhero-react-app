@@ -1,13 +1,18 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from "react-router-dom";
+import "./pageWrapper.css";
 
 const PageWrapper = () => {
   return (
     <>
-      <NavLink to="/" >Home</NavLink>
-      <NavLink to="/superheros" >Superheros</NavLink>
+      <nav>
+        <ul className="Nav-links">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/superheros">Superheros</NavLink>
+        </ul>
+      </nav>
+      <Outlet />
     </>
-  )
-}
+  );
+};
 
-export default PageWrapper
+export default PageWrapper;

@@ -1,7 +1,11 @@
-import React from "react";
+import "./Header.css";
 
 const Header = () => {
-  return <div>SuperHero Hunter</div>;
+  return (
+    <>
+      <div className="header">SuperHero Hunter</div>
+    </>
+  );
 };
 
 export default Header;

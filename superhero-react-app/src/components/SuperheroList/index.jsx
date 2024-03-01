@@ -1,9 +1,5 @@
-import React from 'react'
-
 const SuperheroList = () => {
-  return (
-    <div>SuperheroList</div>
-  )
-}
+  return <div>SuperheroList</div>;
+};
 
-export default SuperheroList
+export default SuperheroList;
