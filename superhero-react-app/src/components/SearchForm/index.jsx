@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 const SearchForm = () => {
     const [input, setInput] = useState('')
     const [searchString, setSearchString ] = useState('')
-    const {superheros , setSuperheros } = useSuperhero()
+    const { setSuperheros } = useSuperhero()
 
     useEffect(() => {
         const SearchAPI = async () => {
