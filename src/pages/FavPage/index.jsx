@@ -14,9 +14,8 @@ const FavPage = () => {
     const fetchFavoriteSuperheroes = async () => {
       const promises = savedSuperheroIds.map(async (id) => {
         try {
-          const response = await axios.get(
-            `https://superheroapi.com/api.php/2073755343009452/${id}`
-          );
+
+          const response = await axios.get(`https://superheroapi.com/api.php/2073755343009452/${id}`);
           return response.data;
         } catch (error) {
           console.error(`Error fetching superhero with ID ${id}`, error);
