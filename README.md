@@ -1,6 +1,6 @@
 # superhero-react-app
 
-this app is live on git hub pages on:
+this app is live on render: https://superhero-react-app.onrender.com
 
 # project aim:
 
@@ -24,3 +24,5 @@ you can have a search history
 # credits:
 
 This is a collab project between Malak Abdalla and Ivan Selihov
+
+updated on : 01/03/2024
