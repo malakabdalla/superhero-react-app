@@ -13,6 +13,7 @@ This is a react Js app as we are fetching from a public api we do not need to ma
 
 # Launch:
 
+you have to install the extension Access control CORS Unblock
 After cloning the repo into your device you can write in the terminal npm install -to install all the dependencies then npm run dev to start the app on your device
 
 # Use examples:

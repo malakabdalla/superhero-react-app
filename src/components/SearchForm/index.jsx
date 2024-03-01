@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import "./Form.css";
 import { useSuperhero } from "../../contexts";
 import { useEffect, useState } from "react";
 
@@ -11,7 +11,7 @@ const SearchForm = () => {
   const searchAPI = async () => {
     try {
       const response = await axios.get(
-        `https://superheroapi.com/api/2073755343009452/search/${searchString}`
+        `https://superheroapi.com/api.php/2073755343009452/search/${searchString}`
       );
       console.log(response);
       if (response.status === 200) {
@@ -47,9 +47,15 @@ const SearchForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleInput} required />
-        <input type="submit" value="search" />
+      <form className="SearchForm" onSubmit={handleSubmit}>
+        <input
+          className="inputField"
+          type="text"
+          placeholder="Super Hero Name"
+          onChange={handleInput}
+          required
+        />
+        <input className="searchBtn" type="submit" value="search" />
       </form>
     </>
   );

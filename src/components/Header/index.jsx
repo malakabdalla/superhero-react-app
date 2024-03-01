@@ -16,7 +16,7 @@ const Header = () => {
       <div>
         <img
           className="frontPageImg"
-          src="/public/7ece2a36566101.573086c407031.jpg"
+          src="../../../public/7ece2a36566101.573086c407031.jpg"
         />
       </div>
     </>
