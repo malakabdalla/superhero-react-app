@@ -14,10 +14,7 @@ const Header = () => {
         </p>
       </div>
       <div>
-        <img
-          className="frontPageImg"
-          src="../../../public/7ece2a36566101.573086c407031.jpg"
-        />
+        <img className="frontPageImg" src="7ece2a36566101.573086c407031.jpg" />
       </div>
     </>
   );

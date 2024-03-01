@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios"; // Make sure to install axios if not already done
 import { useSuperhero } from "../../contexts";
 
 const FavPage = () => {
+  // eslint-disable-next-line no-unused-vars
   const { addToFavorites } = useSuperhero();
   const [favoriteSuperheroes, setFavoriteSuperheroes] = useState([]);
 
   useEffect(() => {
-    
-    const savedSuperheroIds = JSON.parse(localStorage.getItem("favoriteSuperheroIds")) || [];
+    const savedSuperheroIds =
+      JSON.parse(localStorage.getItem("favoriteSuperheroIds")) || [];
 
-    
     const fetchFavoriteSuperheroes = async () => {
       const promises = savedSuperheroIds.map(async (id) => {
         try {
+
           const response = await axios.get(`https://superheroapi.com/api.php/2073755343009452/${id}`);
           return response.data;
         } catch (error) {
@@ -23,7 +24,9 @@ const FavPage = () => {
       });
 
       const favoriteSuperheroesData = await Promise.all(promises);
-      setFavoriteSuperheroes(favoriteSuperheroesData.filter((hero) => hero !== null));
+      setFavoriteSuperheroes(
+        favoriteSuperheroesData.filter((hero) => hero !== null)
+      );
     };
 
     fetchFavoriteSuperheroes();
