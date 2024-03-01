@@ -1,0 +1,27 @@
+.header {
+    font-size: 6rem;
+    margin-top: 5rem;
+    color: hsla(0, 81%, 48%, 0.959);
+
+}
+
+.massage {
+    max-width: 700px;
+    margin-left: 300px;
+}
+
+.messagePara {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.statementPara {
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.frontPageImg {
+    margin-top: 5rem;
+    border-radius: 30px;
+    height: 700px;
+}
