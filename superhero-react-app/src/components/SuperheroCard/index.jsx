@@ -3,7 +3,7 @@ import { useSuperhero } from '../../contexts';
 
 const SuperheroCard = () => {
     const { superheros } = useSuperhero();
-    const superhero = superheros[0]; 
+    const superhero = superheros; 
     
     const {
         id,
