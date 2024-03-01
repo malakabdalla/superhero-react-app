@@ -11,7 +11,7 @@ const SearchForm = () => {
   const searchAPI = async () => {
     try {
       const response = await axios.get(
-        `https://superheroapi.com/api/2073755343009452/search/${searchString}`
+        `https://superheroapi.com/api.php/2073755343009452/search/${searchString}`
       );
       console.log(response);
       if (response.status === 200) {
