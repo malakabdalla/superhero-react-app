@@ -4,6 +4,10 @@ const SuperheroCard = () => {
   const { superheros } = useSuperhero();
   const superhero = superheros;
 
+  if (!superhero || !superhero.image || !superhero.image.url) {
+    return <p>No superhero data available</p>; 
+  }  
+
   const {
     id,
     name,
