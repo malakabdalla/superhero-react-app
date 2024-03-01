@@ -1,6 +1,10 @@
 import React from 'react'
+import { useSuperhero } from '../../contexts';
 
-const SuperheroCard = ({superhero}) => {
+const SuperheroCard = () => {
+    const { superheros } = useSuperhero();
+    const superhero = superheros[0]; 
+    
     const {
         id,
         name,
