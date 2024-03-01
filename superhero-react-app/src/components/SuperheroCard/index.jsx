@@ -1,8 +1,15 @@
 import { useSuperhero } from "../../contexts";
 
 const SuperheroCard = () => {
-  const { superheros } = useSuperhero();
+  const { superheros, addToFavorites } = useSuperhero();
   const superhero = superheros;
+
+  const handleAddToFavorites = () => {
+    if (superhero && superhero.id) {
+      addToFavorites(superhero.id);
+      // Save superhero id to localStorage or dispatch an action to handle it
+    }
+  };
 
   if (!superhero || !superhero.image || !superhero.image.url) {
     return <p>No superhero data available</p>; 
@@ -35,6 +42,7 @@ const SuperheroCard = () => {
         </ul>
       </div>
       <div>
+        <button onClick={handleAddToFavorites}>Add to Favorites</button>
         <h3>Biography:</h3>
         <p>
           <strong>Full Name:</strong> {biography["full-name"]}

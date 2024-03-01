@@ -14,6 +14,7 @@ function App() {
           <Route path='/' element={<PageWrapper />}>
             <Route index element={<Pages.HomePage />} />
             <Route path='/superheros' element={<Pages.SuperheroPage />} />
+            <Route path ='/favorites' element = {<Pages.FavPage/>} />
           </Route>
         </Routes>
       </SuperheroProvider>

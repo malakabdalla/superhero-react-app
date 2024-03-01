@@ -21,6 +21,9 @@ const PageWrapper = () => {
             <NavLink to="/superheros">
               <button>Superheros</button>
             </NavLink>
+            <NavLink to="/favorites">
+              <button>Favorites</button>
+            </NavLink>
           </div>
         </ul>
       </nav>
