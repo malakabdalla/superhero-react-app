@@ -15,7 +15,7 @@ const FavPage = () => {
       const promises = savedSuperheroIds.map(async (id) => {
         try {
           const response = await axios.get(
-            `https://superheroapi.com/api/2073755343009452/${id}`
+            `https://superheroapi.com/api.php/2073755343009452/${id}`
           );
           return response.data;
         } catch (error) {
