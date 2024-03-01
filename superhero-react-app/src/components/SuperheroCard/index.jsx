@@ -1,4 +1,5 @@
 import { useSuperhero } from "../../contexts";
+import "./SuperHeroCard.css";
 
 const SuperheroCard = () => {
   const { superheros, addToFavorites } = useSuperhero();
@@ -12,98 +13,92 @@ const SuperheroCard = () => {
   };
 
   if (!superhero || !superhero.image || !superhero.image.url) {
-    return <p>No superhero data available</p>; 
-  }  
+    return <p>No superhero data available</p>;
+  }
 
-  const {
-    id,
-    name,
-    powerstats,
-    biography,
-    appearance,
-    work,
-    connections,
-    image,
-  } = superhero;
+  const { name, powerstats, biography, appearance, work, connections, image } =
+    superhero;
 
   return (
     <div className="superhero-card">
-      <img src={image.url} alt={name} />
-      <h2>{name}</h2>
-      <p>ID: {id}</p>
-      <div>
-        <h3>Powerstats:</h3>
-        <ul>
-          {Object.entries(powerstats).map(([stat, value]) => (
-            <li key={stat}>
-              {stat}: {value}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
+      <img className="heroImg" src={image.url} alt={name} />
+      <div className="superHero-info">
+        <h2>{name}</h2>
         <button onClick={handleAddToFavorites}>Add to Favorites</button>
-        <h3>Biography:</h3>
-        <p>
-          <strong>Full Name:</strong> {biography["full-name"]}
-        </p>
-        <p>
-          <strong>Alter Egos:</strong> {biography["alter-egos"]}
-        </p>
-        <p>
-          <strong>Aliases:</strong> {biography.aliases.join(", ")}
-        </p>
-        <p>
-          <strong>Place of Birth:</strong> {biography["place-of-birth"]}
-        </p>
-        <p>
-          <strong>First Appearance:</strong> {biography["first-appearance"]}
-        </p>
-        <p>
-          <strong>Publisher:</strong> {biography.publisher}
-        </p>
-        <p>
-          <strong>Alignment:</strong> {biography.alignment}
-        </p>
-      </div>
-      <div>
-        <h3>Appearance:</h3>
-        <p>
-          <strong>Gender:</strong> {appearance.gender}
-        </p>
-        <p>
-          <strong>Race:</strong> {appearance.race}
-        </p>
-        <p>
-          <strong>Height:</strong> {appearance.height.join(", ")}
-        </p>
-        <p>
-          <strong>Weight:</strong> {appearance.weight.join(", ")}
-        </p>
-        <p>
-          <strong>Eye Color:</strong> {appearance["eye-color"]}
-        </p>
-        <p>
-          <strong>Hair Color:</strong> {appearance["hair-color"]}
-        </p>
-      </div>
-      <div>
-        <h3>Work:</h3>
-        <p>
-          <strong>Occupation:</strong> {work.occupation}
-        </p>
-        <p>
-          <strong>Base:</strong> {work.base}
-        </p>
-      </div>
-      <div>
-        <h3>Connections:</h3>
-        <p>
-          <strong>Group Affiliation:</strong> {connections["group-affiliation"]}
-        </p>
-        <p>
-          <strong>Relatives:</strong> {connections.relatives}
-        </p>
+        <div>
+          <h3> Stats:</h3>
+          <ul className="stat-list">
+            {Object.entries(powerstats).map(([stat, value]) => (
+              <li key={stat}>
+                {stat}: {value}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Biography:</h3>
+          <p className="bio">
+            <strong>Full Name: </strong> {biography["full-name"]}
+          </p>
+          <p className="bio">
+            <strong>Alter Egos: </strong> {biography["alter-egos"]}
+          </p>
+          <p className="bio">
+            <strong>Aliases: </strong> {biography.aliases.join(", ")}
+          </p>
+          <p className="bio">
+            <strong>Place of Birth: </strong> {biography["place-of-birth"]}
+          </p>
+          <p className="bio">
+            <strong>First Appearance: </strong> {biography["first-appearance"]}
+          </p>
+          <p>
+            <strong>Publisher: </strong> {biography.publisher}
+          </p>
+          <p className="bio">
+            <strong>Alignment: </strong> {biography.alignment}
+          </p>
+        </div>
+        <div>
+          <h3>Appearance:</h3>
+          <p className="bio">
+            <strong>Gender:</strong> {appearance.gender}
+          </p>
+          <p className="bio">
+            <strong>Race:</strong> {appearance.race}
+          </p>
+          <p className="bio">
+            <strong>Height:</strong> {appearance.height.join(", ")}
+          </p>
+          <p className="bio">
+            <strong>Weight:</strong> {appearance.weight.join(", ")}
+          </p>
+          <p className="bio">
+            <strong>Eye Color:</strong> {appearance["eye-color"]}
+          </p>
+          <p className="bio">
+            <strong>Hair Color:</strong> {appearance["hair-color"]}
+          </p>
+        </div>
+        <div>
+          <h3>Work:</h3>
+          <p className="bio">
+            <strong>Occupation:</strong> {work.occupation}
+          </p>
+          <p className="bio">
+            <strong>Base:</strong> {work.base}
+          </p>
+        </div>
+        <div>
+          <h3>Connections:</h3>
+          <p className="bio">
+            <strong>Group Affiliation:</strong>{" "}
+            {connections["group-affiliation"]}
+          </p>
+          <p className="bio">
+            <strong>Relatives:</strong> {connections.relatives}
+          </p>
+        </div>
       </div>
     </div>
   );

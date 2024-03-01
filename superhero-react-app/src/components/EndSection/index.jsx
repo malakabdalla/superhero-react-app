@@ -12,7 +12,7 @@ function EndSection() {
             Find out everything you need to know about your favorite superheroes
             with just a few clicks.
           </p>
-          <Link to="/superheros">
+          <Link to="/favorites">
             <button>Favorite</button>
           </Link>
         </div>

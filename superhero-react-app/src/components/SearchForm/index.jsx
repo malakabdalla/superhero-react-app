@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import "./Form.css";
 import { useSuperhero } from "../../contexts";
 import { useEffect, useState } from "react";
 
@@ -47,9 +47,15 @@ const SearchForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleInput} required />
-        <input type="submit" value="search" />
+      <form className="SearchForm" onSubmit={handleSubmit}>
+        <input
+          className="inputField"
+          type="text"
+          placeholder="Super Hero Name"
+          onChange={handleInput}
+          required
+        />
+        <input className="searchBtn" type="submit" value="search" />
       </form>
     </>
   );

@@ -28,6 +28,16 @@ const PageWrapper = () => {
         </ul>
       </nav>
       <Outlet />
+      <footer className="Footer">
+        <div className="logo-footer">
+          <NavLink to="/">
+            <img
+              className="img-footer"
+              src="./public/281786_super_hero_superman_icon.png"
+            />
+          </NavLink>
+        </div>
+      </footer>
     </>
   );
 };

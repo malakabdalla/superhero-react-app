@@ -53,3 +53,12 @@ button:focus-visible {
     flex-direction: row;
     margin: 0;
 }
+
+.Footer {
+    background: hsla(0, 0%, 0%, 0.2);
+}
+
+.img-footer {
+    height: 2rem;
+    margin-top: 1rem;
+}
