@@ -1,8 +1,26 @@
-# React + Vite
+# superhero-react-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this app is live on git hub pages on:
 
-Currently, two official plugins are available:
+# project aim:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+this is a react app that takes in the superhero apihttps://www.superheroapi.com/ and lets you search by name and buy id
+the search will show an image of the superhero a little biography and a description of their appearance work connections
+
+# Technologies used:
+
+This is a react Js app as we are fetching from a public api we do not need to make a backend
+
+# Launch:
+
+you have to install the extension Access control CORS Unblock
+After cloning the repo into your device you can write in the terminal npm install -to install all the dependencies then npm run dev to start the app on your device
+
+# Use examples:
+
+you can search by superhero name
+you can have a search history
+
+# credits:
+
+This is a collab project between Malak Abdalla and Ivan Selihov
